@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './index.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import {HashRouter,Routes,Route} from 'react-router-dom'
 import DisplayAssignment from './DisplayAssignment';
 import ContactUS from './ContactUs';
 import Faculty from './Faculty';
@@ -15,7 +15,7 @@ function App() {
  
   return (
     <div >
-        <BrowserRouter>
+        <HashRouter basename='cse-1'>
         <Routes>
          <Route path='/'  element= {<Home></Home>}/>
           <Route path='/rows'  element= {<DisplayAssignment> </DisplayAssignment>}/>
@@ -24,7 +24,7 @@ function App() {
           <Route path='/about'  element= {<About></About>}/>
           <Route path='/timetable'  element= {<TimeTable></TimeTable>}/>
         </Routes>
-       </BrowserRouter>
+       </HashRouter>
     </div>
   );
 }
