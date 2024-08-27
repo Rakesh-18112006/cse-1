@@ -1,0 +1,157 @@
+/* Footnote.css */
+
+.footnote-container {
+    /* position : fixed; */
+    left : 0;
+    bottom : 0;
+    width: 100%;
+    background-color: #000; /* Footer background color */
+    color: #fff; /* Text color */
+    padding: 20px 0;
+    
+   
+}
+
+.footnote {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footnote-section {
+    flex: 1;
+    margin: 15px;
+}
+
+.footnote-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footnote-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footnote-section ul li {
+    margin-bottom: 10px;
+}
+
+.footnote a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footnote a:hover {
+    text-decoration: underline;
+}
+
+.web-developers h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.web-developers h5 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footnote-form {
+    flex: 1;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footnote input[type="text"],
+.footnote input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footnote button {
+    background-color: #00f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footnote button:hover {
+    background-color: #0053ba;
+}
+
+/* Social media icon styles */
+.footnote-section ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.footnote-section ul li a svg {
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footnote {
+         flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .footnote-section {
+        margin: 15px 0;
+    }
+
+    .footnote-form {
+        width: 100%;
+        max-width: px;
+    }
+
+    .footnote button {
+        width: 100%;
+    }
+    @media (max-width: 412px) {
+        .footnote-container {
+            position : fixed;
+            left : 0;
+            bottom : 0;
+            width: 100%;
+            background-color: #000; /* Footer background color */
+            color: #fff; /* Text color */
+            padding: 20px 0;
+            
+           
+        }
+        .footnote {
+            /* flex-direction: column; */
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footnote-section {
+            margin: 15px 0;
+        }
+    
+        .footnote-form {
+            width: 100%;
+            max-width: 300px;
+        }
+    
+        .footnote button {
+            width: 100%;
+        }
+    }
+}
