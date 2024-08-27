@@ -15,7 +15,7 @@ function App() {
  
   return (
     <div >
-        <HashRouter basename='cse-1'>
+        <HashRouter>
         <Routes>
          <Route path='/'  element= {<Home></Home>}/>
           <Route path='/rows'  element= {<DisplayAssignment> </DisplayAssignment>}/>
