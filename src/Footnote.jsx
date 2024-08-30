@@ -10,7 +10,7 @@ const Footnote = () => {
         <div className ="bg-[black] text-white">
             <footer className="bg-[black] text-white m-3 md:flex md:gap-20 ">
                 <div className="pt-4">
-                    <h2> Computer Science Department</h2>
+                    <h2> # Computer Science Department</h2>
                     <p>© Rajiv Gandhi University of Knowledge Technologies, All Rights Reserved... @cse-01 CF-02</p>
                 </div>
                 <div className="flex gap-8">
@@ -18,8 +18,8 @@ const Footnote = () => {
                     <h2>Useful Links</h2>
                     <ul>
                         <li><Link to="/rows">RowRotation</Link></li>
-                        <li><Link to="#">Faculty</Link></li>
-                        <li><a href="#">Sports</a></li>
+                        <li><Link to="/faculty">Faculty</Link></li>
+                        <li><a href="/sports">Sports</a></li>
                         <li><Link to="/contactus">Contact Us</Link></li>
                         <li><Link to="/about">About Us</Link></li>
                     </ul>

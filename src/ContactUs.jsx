@@ -21,7 +21,7 @@ const ContactUS = () => {
     
             <h2 style={ {
                 color : 'brown',
-            }} >Mrs. Mohitha</h2>
+            }} >Ms. Mohitha</h2>
             <h4 className="flex"> <MdAddIcCall /> : 9381453687 </h4>
             <h4 className="mb-[70%] flex"> <SiGmail /> : mohitha@gmail.com </h4>
             </div>
