@@ -21,7 +21,9 @@ const publicHolidays = [
   "2024-08-15", // Example Public Holiday
   "2024-12-25",
    "2024-08-26",
-   "2024-09-07", // Christmas
+   "2024-09-07",
+   "2024-10-02" ,
+   // Christmas
   // Add more public holidays here
 ];
 
@@ -34,7 +36,7 @@ const generateAssignments = (startDate, arrays) => {
   let arrayIndex = 0;
   let currentDate = new Date(startDate);
 
-  while (arrayIndex < arrays.length) {
+  while (true) {
     const dayOfWeek = currentDate.getDay();
 
     if (dayOfWeek !== 0 && dayOfWeek !== 6 && !isPublicHoliday(currentDate)) {
@@ -42,9 +44,18 @@ const generateAssignments = (startDate, arrays) => {
       assignments[dateString] = arrays[arrayIndex];
 
       arrayIndex++;
+      // Reset arrayIndex to 0 if it exceeds the length of the arrays
+      if (arrayIndex >= arrays.length) {
+        arrayIndex = 0;
+      }
     }
 
     currentDate.setDate(currentDate.getDate() + 1);
+    
+    // Exit condition (optional): Set a limit on how far you want to generate assignments
+    if (currentDate > new Date('2024-12-31')) {
+      break;
+    }
   }
 
   return assignments;
@@ -84,47 +95,5 @@ const DisplayAssignment = () => {
     </div>
   );
 };
-
-// const styles = {
-//   container: {
-//     backgroundColor: '#f4f4f9',
-//     padding: '20px',
-    
-//   },
-//   heading: {
-//     fontSize: '36px',
-//     textAlign: 'center',
-//     marginBottom: '20px',
-//     marginTop: '6%',
-//     color: '#333',
-//     paddingTop : '50%',
-//   },
-//   assignmentBox: {
-//     backgroundColor: '#ffffff',
-//     padding: '20px',
-//     borderRadius: '8px',
-//     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//     maxWidth: '600px',
-//     margin: '0 auto',
-//     textAlign: 'center',
-//     marginBottom: '70%',
-//   },
-//   dateText: {
-//     fontSize: '18px',
-//     marginBottom: '10px',
-//     color: '#555',
-//   },
-//   assignedRows: {
-//     fontSize: '24px',
-//     fontWeight: 'bold',
-//     color: '#007bff',
-//   },
-//   noAssignment: {
-//     textAlign: 'center',
-//     color: '#d9534f',
-//     fontSize: '20px',
-//     fontWeight: 'bold',
-//   },
-// };
 
 export default DisplayAssignment;

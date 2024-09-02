@@ -4,7 +4,7 @@ import { MdVerified } from "react-icons/md";
 const Navbar = () => {
   return (
     <div> 
-      <nav className="   bg-[#5ebe86]  md:flex">
+      <nav className="   bg-[#5ebe86]  md:flex ">
         <div className=" flex ">
           <img
             src="./logo2.jpg" // Ensure the path is correct
