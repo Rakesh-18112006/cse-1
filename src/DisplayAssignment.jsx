@@ -24,6 +24,8 @@ const publicHolidays = [
    "2024-09-07",
    "2024-10-02" ,
    "2024-09-16",
+   "2024-09-19",
+   "2024-09-20",
    // Christmas
   // Add more public holidays here
 ];
