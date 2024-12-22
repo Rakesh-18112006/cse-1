@@ -1,28 +1,89 @@
-import Footnote from "./Footnote"
-import Navbar from "./Navbar"
+import React from "react";
+// import { Navbar } from "react-bootstrap";
+import Footnote from "./Footnote";
+import Navbar from "./Navbar";
 
 const About = () => {
-    return (
-        <div style = {{
-            backgroundColor : '#e3c8a8',
-        }}>
-            <Navbar></Navbar>
-            <h1 className="text-[brown] text-center">About CSE-01 :</h1>
-            <div >
-            <h6 className="bg-blue-700 text-white p-4 rounded-[20px]">
-          
-   
-Welcome to the official page network of CSE-01, a dynamic and cohesive group of students united by our passion for learning and excellence. As a university-level class specializing in Computer Science and Engineering, we pride ourselves on our strong sense of unity and discipline that drives our academic and extracurricular achievements.
-In the classroom, our dedication to studies is evident through our consistently outstanding academic performances. We strive to push the boundaries of knowledge, engage in innovative projects, and support each other in mastering complex concepts and technologies.
-Beyond academics, the students of CSE-01 excel in a diverse array of cultural activities and sports. From participating in university cultural festivals to competing in various sports tournaments, we believe in the importance of a well-rounded education that fosters creativity, teamwork, and physical well-being.
-Our collective spirit and commitment to excellence not only enhance our individual growth but also contribute positively to the university community. We are proud of our accomplishments and remain dedicated to upholding the values of unity and discipline in all our endeavors.
-
-Join us on our journey as we continue to learn, grow, and make a difference both inside and outside the  classroom.
-            </h6>
-
+  return (
+    <>
+    <Navbar></Navbar>
+    <div className="bg-gradient-to-b from-purple-50 to-purple-100 p-6 md:p-12">
+      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 md:p-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-purple-600 mb-4 text-center">
+          About Us
+        </h2>
+        <p className="text-gray-600 text-center mb-8">
+          Welcome to our classroom! We are committed to fostering an environment
+          where learning thrives and creativity flourishes. Here's what makes
+          us special:
+        </p>
+        <div className="space-y-6">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-shrink-0">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Dedicated Faculty"
+                className="rounded-full w-24 h-24 md:w-32 md:h-32"
+              />
             </div>
-            <Footnote></Footnote>
+            <div>
+              <h3 className="text-xl font-semibold text-purple-700">
+                Dedicated Faculty
+              </h3>
+              <p className="text-gray-600">
+                Our teachers are passionate about providing high-quality
+                education, inspiring students to achieve their best.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-shrink-0">
+              <img
+                src="boys.jpg"
+                alt="Innovative Learning"
+                className="rounded-full w-24 h-24 md:w-32 md:h-32"
+              />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-purple-700">
+                Innovative Learning
+              </h3>
+              <p className="text-gray-600">
+                We embrace modern teaching techniques, making learning engaging
+                and fun for all our students.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-shrink-0">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Supportive Community"
+                className="rounded-full w-24 h-24 md:w-32 md:h-32"
+              />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-purple-700">
+                Supportive Community
+              </h3>
+              <p className="text-gray-600">
+                Our classroom is a space where everyone feels valued and
+                encouraged to grow.
+              </p>
+            </div>
+          </div>
         </div>
-    );
-}
+        <div className="mt-8 text-center">
+          <p className="text-gray-600">
+            Join us in this journey of growth and discovery. Together, we shape
+            the future!
+          </p>
+        </div>
+      </div>
+    </div>
+    <Footnote></Footnote>
+    </>
+  );
+};
+
 export default About;

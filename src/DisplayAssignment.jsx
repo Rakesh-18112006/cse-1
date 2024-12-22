@@ -44,7 +44,7 @@ const generateAssignments = (startDate, arrays) => {
   while (true) {
     const dayOfWeek = currentDate.getDay();
 
-    if (dayOfWeek !== 0 && dayOfWeek !== 6 && !isPublicHoliday(currentDate)) {
+    if (dayOfWeek !== 0 && !isPublicHoliday(currentDate)) {
       const dateString = currentDate.toISOString().split("T")[0];
       assignments[dateString] = arrays[arrayIndex];
 
@@ -58,7 +58,7 @@ const generateAssignments = (startDate, arrays) => {
     currentDate.setDate(currentDate.getDate() + 1);
     
     // Exit condition (optional): Set a limit on how far you want to generate assignments
-    if (currentDate > new Date('2024-12-31')) {
+    if (currentDate > new Date('2025-12-31')) {
       break;
     }
   }
@@ -66,7 +66,7 @@ const generateAssignments = (startDate, arrays) => {
   return assignments;
 };
 
-const startDate = "2024-08-19";
+const startDate = "2024-12-23";
 const assignments = generateAssignments(startDate, arrays);
 
 const DisplayAssignment = () => {
