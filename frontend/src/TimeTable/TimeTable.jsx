@@ -1,5 +1,5 @@
-import Navbar from "./Navbar";
-import Footnote from "./Footnote";
+import Navbar from "../componenets/Navbar";
+import Footnote from "../componenets/Footnote";
 
 const TimeTable = () => {
   return (

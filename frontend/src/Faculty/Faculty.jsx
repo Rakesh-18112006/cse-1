@@ -1,6 +1,7 @@
-import Footnote from "./Footnote";
-import Frame from "./Frame";
-import Navbar from "./Navbar";
+
+import Frame from "../componenets/Frame";
+import Navbar from "../componenets/Navbar";
+import Footnote from "../componenets/Footnote";
 
 const faculty = [
   {

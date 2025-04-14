@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import Footnote from "./Footnote";
+import Navbar from "../componenets/Navbar";
+import Footnote from "../componenets/Footnote";
 
 const arrays = [
   ['MOHITHA', 'MAALASA', 'MITHILESH', 'VENKAT', 'PARINEETHA', 'JAHNAVI'],
@@ -27,7 +27,8 @@ const publicHolidays = [
    "2024-09-19",
    "2024-09-20",
    "2024-09-23",
-   "2024-10-31",
+  "2024-10-31",
+   "2025-04-14",
    // Christmas
   // Add more public holidays here
 ];
@@ -69,7 +70,7 @@ const generateAssignments = (startDate, arrays) => {
 const startDate = "2024-12-23";
 const assignments = generateAssignments(startDate, arrays);
 
-const DisplayAssignment = () => {
+const RowRotation = () => {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -101,4 +102,4 @@ const DisplayAssignment = () => {
   );
 };
 
-export default DisplayAssignment;
+export default RowRotation;

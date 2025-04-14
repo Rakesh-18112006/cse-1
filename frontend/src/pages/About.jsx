@@ -1,7 +1,7 @@
 import React from "react";
 // import { Navbar } from "react-bootstrap";
-import Footnote from "./Footnote";
-import Navbar from "./Navbar";
+import Footnote from "../componenets/Footnote";
+import Navbar from "../componenets/Navbar";
 
 const About = () => {
   return (

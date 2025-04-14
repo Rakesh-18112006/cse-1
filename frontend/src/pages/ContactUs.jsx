@@ -1,11 +1,12 @@
 import React from "react";
-import Footnote from "./Footnote";
-import Navbar from "./Navbar";
+import Navbar from "../componenets/Navbar";
+import Footnote from "../componenets/Footnote";
+
 
 const ContactUs = () => {
   return (
       <>
-      <Navbar></Navbar>
+      < Navbar></Navbar>
      <div className="bg-gradient-to-b from-blue-50 to-blue-100 p-6 md:p-12">
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 md:p-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4 text-center">
@@ -93,7 +94,7 @@ const ContactUs = () => {
         </form>
       </div>
     </div>
-    <Footnote></Footnote>
+   <Footnote ></Footnote>
     </>
   );
 };
