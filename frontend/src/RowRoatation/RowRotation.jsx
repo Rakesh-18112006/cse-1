@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../componenets/Navbar";
 import Footnote from "../componenets/Footnote";
 
 const arrays = [
-  ['MOHITHA', 'MAALASA', 'MITHILESH', 'VENKAT', 'PARINEETHA', 'JAHNAVI'],
-  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'MITHILESH', 'VENKAT', 'PARINEETHA'],
-  ['PARINEETHA', 'JAHNAVI', 'MOHITHA', 'MAALASA', 'MITHILESH', 'VENKAT'],
-  ['MAALASA', 'PARINEETHA', 'MITHILESH', 'VENKAT', 'JAHNAVI', 'MOHITHA'],
-  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'MITHILESH', 'VENKAT', 'JAHNAVI'],
-  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'PARINEETHA', 'MITHILESH', 'VENKAT'],
-  ['PARINEETHA', 'JAHNAVI', 'MITHILESH', 'VENKAT', 'MOHITHA', 'MAALASA'],
-  ['MAALASA', 'PARINEETHA', 'JAHNAVI', 'MITHILESH', 'VENKAT', 'MOHITHA'],
-  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'JAHNAVI', 'MITHILESH', 'VENKAT'],
-  ['JAHNAVI', 'MOHITHA', 'MITHILESH', 'VENKAT', 'MAALASA', 'PARINEETHA'],
-  ['PARINEETHA','JAHNAVI', 'MOHITHA', 'MITHILESH', 'VENKAT', 'MAALASA'],
-  [ 'MAALASA','PARINEETHA','JAHNAVI', 'MOHITHA', 'MITHILESH', 'VENKAT'],
+  ['MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT', 'PARINEETHA', 'JAHNAVI'],
+  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT', 'PARINEETHA'],
+  ['PARINEETHA', 'JAHNAVI', 'MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT'],
+  ['MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT', 'JAHNAVI', 'MOHITHA'],
+  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT', 'JAHNAVI'],
+  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT'],
+  ['PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT', 'MOHITHA', 'MAALASA'],
+  ['MAALASA', 'PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT', 'MOHITHA'],
+  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT'],
+  ['JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT', 'MAALASA', 'PARINEETHA'],
+  ['PARINEETHA','JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT', 'MAALASA'],
+  [ 'MAALASA','PARINEETHA','JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT'],
 ];
 
 const publicHolidays = [
@@ -45,7 +45,7 @@ const generateAssignments = (startDate, arrays) => {
   while (true) {
     const dayOfWeek = currentDate.getDay();
 
-    if (dayOfWeek !== 0 && !isPublicHoliday(currentDate)) {
+    if (dayOfWeek !== 0  &&dayOfWeek !== 6 && !isPublicHoliday(currentDate)) {
       const dateString = currentDate.toISOString().split("T")[0];
       assignments[dateString] = arrays[arrayIndex];
 

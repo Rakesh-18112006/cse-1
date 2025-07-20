@@ -1,89 +1,100 @@
-
-import Frame from "../componenets/Frame";
-import Navbar from "../componenets/Navbar";
-import Footnote from "../componenets/Footnote";
+import React from 'react';
+import './Faculty.css';
+import Footnote from '../componenets/Footnote';
+import Navbar from '../componenets/Navbar';
 
 const faculty = [
   {
     img: "./hod.jpg",
     name: "Ms. Nagarjuna Devi",
     qual: "M.Tech, PhD",
-    description: "Head Of The Department @ Computer Science Department in RGUKT Nuzvid",
+    description: "Head of Computer Science Department at RGUKT Nuzvid with over 15 years of experience in academia and research. Specializes in curriculum development and fostering research culture among students.",
     url: "https://rguktn.ac.in/profile/RN051116003",
+    subjects: ["Leadership", "Research Methodology", "Academic Administration", "Computer Networks", "Data Structures"],
+    fullBio: "Dr. Nagarjuna Devi has published numerous papers in international journals and conferences. She has guided several PhD students and received the 'Best Teacher Award' from the state government in 2019. Her research focuses on network security and distributed systems."
   },
   {
-    img: "./kumar.jpg",
-    name: "Mr. Kumar Anurupam",
-    qual: "M.Tech, SET",
-    description: "Assistant Professor (OOPS Java) @ Computer Science Department in RGUKT Nuzvid",
-    url: "https://rguktn.ac.in/profile/130510N",
+    img: "./kk-singh.jpg",
+    name: "Mr. Krishna Kumar Singh",
+    qual: "M.Tech",
+    description: "Assistant Professor specializing in Design and Analysis of Algorithms with a passion for competitive programming.",
+    url: "https://rguktn.ac.in/profile/RN051116001",
+    subjects: ["Algorithms", "Complexity Theory", "Competitive Programming", "Graph Theory", "Dynamic Programming"],
+    fullBio: "Mr. Singh has trained multiple teams for ACM-ICPC and other programming contests. His innovative teaching methods make complex algorithmic concepts accessible to students. He regularly conducts workshops on advanced problem-solving techniques."
   },
   {
-    img: "./ram.jpg",
-    name: "Dr. M. Sadasiva Butchiram",
-    qual: "M.Sc, Ph.D, SLET",
-    description: "Mentor (Environmental Science) @ Computer Science Department in RGUKT Nuzvid",
-    url: "https://rguktn.ac.in/profile/090119N",
+    img: "./upendra.jpg",
+    name: "Dr. R.Upendra Rao",
+    qual: "M.Tech, PhD",
+    description: "Assistant Professor specializing in Database Systems and Big Data technologies.",
+    url: "https://rguktn.ac.in/profile/RN051116004",
+    subjects: ["DBMS", "Big Data", "NoSQL", "Data Warehousing", "SQL Optimization"],
+    fullBio: "Dr. Rao has extensive industry experience having worked with major IT companies before joining academia. His research focuses on scalable database architectures for cloud environments. He has implemented several industry-academia collaboration programs."
   },
   {
-    img: "./naidusir.jpeg",
-    name: "Mr. C.M Naidu",
-    qual: "M.Sc, SLET",
-    description: "Assistant Professor (Maths) @ Computer Science Department in RGUKT Nuzvid",
-    url: "https://rguktn.ac.in/profile/131305N",
+    img: "./rajesh.jpg",
+    name: "Mr. B. Rajesh",
+    qual: "M.Sc, NET",
+    description: "Mathematics Professor dedicated to teaching mathematical foundations for Computer Science students.",
+    url: "https://rguktn.ac.in/profile/181351N",
+    subjects: ["Discrete Math", "Statistics", "Linear Algebra", "Graph Theory", "Numerical Methods"],
+    fullBio: "Mr. Rajesh has a unique ability to connect abstract mathematical concepts with computer science applications. He has developed specialized course materials that bridge the gap between theory and practical implementation in CS."
   },
   {
-    img: "./suresh.jpg",
-    name: "Dr. Nalliboyina Suresh Babu",
-    qual: "M.Com, MBA, Ph.D",
-    description: "Assistant Professor (C), Management in RGUKT Nuzvid",
-    url: "https://rguktn.ac.in/profile/211101N",
+    img: "./jangili-prasad.jpg",
+    name: "Mr. Jangili Prasad",
+    qual: "M.Tech",
+    description: "Assistant Professor specializing in Electronics & Computing systems.",
+    url: "https://rguktn.ac.in/profile/210709N",
+    subjects: ["Computer Architecture", "Embedded Systems", "IoT", "Digital Electronics", "VLSI Design"],
+    fullBio: "Mr. Prasad focuses on hardware-software co-design and embedded systems development. He leads the department's IoT lab and has guided students in developing several innovative projects that have won national competitions."
   },
   {
-    img: "./srilaxmi.jpg",
-    name: "Ms. D. Srilakshmi",
-    qual: "M-Tech",
-    description: "Assistant Professor (C), Computer Science and Engineering",
-    url: "https://rguktn.ac.in/profile/180551N",
-  },
-  {
-    img: "./ganesh.jpg",
-    name: "Mr. D. Ganesh",
-    qual: "M.Tech, M.Sc, SLET",
-    description: "Assistant Professor (C), Physics, RGUKT Nuzvid",
-    url: "https://rguktn.ac.in/profile/131504N",
+    img: "./sadu-chiranjeevi.jpg",
+    name: "Dr. S.Chiranjeevi",
+    qual: "M.Tech, PhD",
+    description: "Assistant Professor specializing in Advanced Computing and Artificial Intelligence.",
+    url: "https://rguktn.ac.in/profile/RN051116005",
+    subjects: ["Machine Learning", "AI", "Neural Networks", "Deep Learning", "Computer Vision"],
+    fullBio: "Dr. Chiranjeevi has published extensively in top-tier AI conferences. His current research focuses on explainable AI and ethical machine learning. He leads the department's AI research group and collaborates with several international universities."
   },
 ];
 
-const Faculty = () => {
+function Faculty() {
   return (
-    <div className="bg-gray-200 min-h-screen flex flex-col justify-between z-0">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Faculty Section */}
-      <main className="flex-grow z-10">
-        <div className="bg-gray-800 text-white py-4 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold">Faculty</h1>
-        </div>
-        <div className="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {faculty.map((item, index) => (
-            <Frame
-              key={index}
-              name={item.name}
-              qual={item.qual}
-              img={item.img}
-              url={item.url}
-              description={item.description}
-            />
-          ))}
-        </div>
-      </main>
-
-      {/* Footer */}
-      <Footnote />
-    </div>
+    <>
+      <Navbar/>
+    <section className="faculty-container">
+      <h2 className="faculty-title">Our Esteemed Faculty</h2>
+      <div className="faculty-grid">
+        {faculty.map((member, idx) => (
+          <div className="faculty-card" key={idx}>
+            <div className="faculty-image-wrapper">
+              <img src={member.img} alt={member.name} className="faculty-image" />
+            </div>
+            <div className="faculty-info">
+              <a href={member.url} target="_blank" rel="noopener noreferrer" className="faculty-name">
+                {member.name}
+              </a>
+              <p className="faculty-qual">{member.qual}</p>
+              <p className="faculty-desc">{member.description}</p>
+              <div className="faculty-subjects">
+                {member.subjects.map((subj, i) => (
+                  <span className="faculty-subject" key={i}>{subj}</span>
+                ))}
+              </div>
+              <details>
+                <summary>Full Bio</summary>
+                <p className="faculty-bio">{member.fullBio}</p>
+              </details>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <Footnote/>
+    </>
   );
-};
+}
 
 export default Faculty;
