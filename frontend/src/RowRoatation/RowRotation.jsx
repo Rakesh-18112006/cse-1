@@ -3,18 +3,18 @@ import Navbar from "../componenets/Navbar";
 import Footnote from "../componenets/Footnote";
 
 const arrays = [
-  ['MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT', 'PARINEETHA', 'JAHNAVI'],
-  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT', 'PARINEETHA'],
-  ['PARINEETHA', 'JAHNAVI', 'MOHITHA', 'MAALASA', 'HARSHITH', 'VENKAT'],
-  ['MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT', 'JAHNAVI', 'MOHITHA'],
-  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT', 'JAHNAVI'],
-  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'PARINEETHA', 'HARSHITH', 'VENKAT'],
-  ['PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT', 'MOHITHA', 'MAALASA'],
-  ['MAALASA', 'PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT', 'MOHITHA'],
-  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'JAHNAVI', 'HARSHITH', 'VENKAT'],
-  ['JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT', 'MAALASA', 'PARINEETHA'],
-  ['PARINEETHA','JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT', 'MAALASA'],
-  [ 'MAALASA','PARINEETHA','JAHNAVI', 'MOHITHA', 'HARSHITH', 'VENKAT'],
+  ['MOHITHA', 'MAALASA', 'ADITYA', 'VENKAT', 'PARINEETHA', 'JAHNAVI'],
+  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'ADITYA', 'VENKAT', 'PARINEETHA'],
+  ['PARINEETHA', 'JAHNAVI', 'MOHITHA', 'MAALASA', 'ADITYA', 'VENKAT'],
+  ['MAALASA', 'PARINEETHA', 'ADITYA', 'VENKAT', 'JAHNAVI', 'MOHITHA'],
+  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'ADITYA', 'VENKAT', 'JAHNAVI'],
+  ['JAHNAVI', 'MOHITHA', 'MAALASA', 'PARINEETHA', 'ADITYA', 'VENKAT'],
+  ['PARINEETHA', 'JAHNAVI', 'ADITYA', 'VENKAT', 'MOHITHA', 'MAALASA'],
+  ['MAALASA', 'PARINEETHA', 'JAHNAVI', 'ADITYA', 'VENKAT', 'MOHITHA'],
+  ['MOHITHA', 'MAALASA', 'PARINEETHA', 'JAHNAVI', 'ADITYA', 'VENKAT'],
+  ['JAHNAVI', 'MOHITHA', 'ADITYA', 'VENKAT', 'MAALASA', 'PARINEETHA'],
+  ['PARINEETHA','JAHNAVI', 'MOHITHA', 'ADITYA', 'VENKAT', 'MAALASA'],
+  [ 'MAALASA','PARINEETHA','JAHNAVI', 'MOHITHA', 'ADITYA', 'VENKAT'],
 ];
 
 const publicHolidays = [
@@ -27,9 +27,11 @@ const publicHolidays = [
    "2024-09-19",
    "2024-09-20",
    "2024-09-23",
-  "2024-10-31",
-   "2025-04-14",
-   // Christmas
+  "2024-10-31", 
+  "2025-04-14",
+ 
+  // Independence Day
+  // Christmas
   // Add more public holidays here
 ];
 
@@ -67,7 +69,7 @@ const generateAssignments = (startDate, arrays) => {
   return assignments;
 };
 
-const startDate = "2024-12-23";
+const startDate = "2025-01-02";
 const assignments = generateAssignments(startDate, arrays);
 
 const RowRotation = () => {
